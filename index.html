@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
+
 <body>
-  
+
   <div class="container">
-      
+
     <h3>Google Places</h3>
     <form class="form-horizontal" onkeypress="return event.keyCode != 13;">
-       <div class="form-group">
-      <div class="input-group input-group-hg input-group-rounded">
-        <span class="input-group-btn">
-         <button type="submit" class="btn button-search ladda-button" data-style="zoom-in" data-size="l"><span class="ladda-label"><span class="fui-location"></span></button>
-      </span>
-      <input class="form-control" id="autocomplete" placeholder="Enter your address" type="text">
-         </div>
-      
-     
-      <div class="text-inputs">
-       <div class="form-group">
-           <label for="input-street-number" class="col-sm-2 control-label">Street Address</label>
-             <div class="col-sm-6">
-             <input type="text" class="form-control input-sm street_number" id="input-street-number" placeholder="Address line 1" />
-         </div>
-      </div>
-         
-         <div class="form-group ">
-           <div class="col-sm-6 col-md-offset-2">
-             <input type="text" class="form-control input-sm route" id="input-street-name" placeholder="Address line 2" />
-           </div>
+      <div class="form-group">
+        <div class="input-group input-group-hg input-group-rounded">
+          <span class="input-group-btn">
+            <button type="submit" class="btn button-search ladda-button" data-style="zoom-in" data-size="l"><span
+                class="ladda-label"><span class="fui-location"></span></button>
+          </span>
+          <input class="form-control" id="autocomplete" placeholder="Enter your address" type="text">
         </div>
-         <div class="form-group">
-           <label for="input-city" class="col-sm-2 control-label">City</label>
-           <div class="col-sm-8">
-             <input type="text" class="form-control input-sm locality" id="input-city" placeholder="City" />
-           </div>
-        </div>
-        <div class="form-group ">
-           <label for="input-state" class="col-sm-2 control-label">State</label>
-           <div class="col-sm-2">
-             <input type="text" class="form-control input-sm administrative_area_level_1" id="input-state" placeholder="State" />
-           </div>
-        </div>
-         
-         <div class="form-group">
-           <label for="input-postcode" class="col-sm-2 control-label">Postcode</label>
-           <div class="col-sm-2">
-             <input type="text" class="form-control input-sm postal_code" id="input-postcode" placeholder="Postcode" />
-           </div>
-        </div>
-         
-         <div class="form-group">
-           <label for="input-country" class="col-sm-2 control-label">Country</label>
-           <div class="col-sm-2">
-             
-             <select name="" id="input-coutnry" class="form-control input-sm country">
-               <option value="Afghanistan">Afghanistan</option>
+
+
+        <div class="text-inputs">
+          <div class="form-group">
+            <label for="input-street-number" class="col-sm-2 control-label">Street Address</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control input-sm street_number" id="input-street-number"
+                placeholder="Address line 1" />
+            </div>
+          </div>
+
+          <div class="form-group ">
+            <div class="col-sm-6 col-md-offset-2">
+              <input type="text" class="form-control input-sm route" id="input-street-name"
+                placeholder="Address line 2" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-city" class="col-sm-2 control-label">City</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control input-sm locality" id="input-city" placeholder="City" />
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="input-state" class="col-sm-2 control-label">State</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control input-sm administrative_area_level_1" id="input-state"
+                placeholder="State" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-postcode" class="col-sm-2 control-label">Postcode</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control input-sm postal_code" id="input-postcode" placeholder="Postcode" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-country" class="col-sm-2 control-label">Country</label>
+            <div class="col-sm-2">
+
+              <select name="" id="input-coutnry" class="form-control input-sm country">
+                <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -187,7 +196,8 @@
                 <option value="Lithuania">Lithuania</option>
                 <option value="Luxembourg">Luxembourg</option>
                 <option value="Macao">Macao</option>
-                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of
+                </option>
                 <option value="Madagascar">Madagascar</option>
                 <option value="Malawi">Malawi</option>
                 <option value="Malaysia">Malaysia</option>
@@ -260,7 +270,8 @@
                 <option value="Solomon Islands">Solomon Islands</option>
                 <option value="Somalia">Somalia</option>
                 <option value="South Africa">South Africa</option>
-                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich
+                  Islands</option>
                 <option value="Spain">Spain</option>
                 <option value="Sri Lanka">Sri Lanka</option>
                 <option value="Sudan">Sudan</option>
@@ -302,17 +313,29 @@
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-             </select>
-           </div>
-           
-           </div>
+              </select>
+            </div>
+
+          </div>
         </div>
-          
-         </form>
-         
-         
-</div>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfbd6j5GD6sePUs-V954bpIO0ae5lo4N8&libraries=places&callback=initAutocomplete"></script>
-    <script src="finder.js"></script>
-  </body>
+
+    </form>
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfbd6j5GD6sePUs-V954bpIO0ae5lo4N8&libraries=places&callback=initAutocomplete">
+  </script>
+  <script src="finder.js"></script>
+</body>
+
 </html>
