@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -335,7 +336,77 @@
   <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfbd6j5GD6sePUs-V954bpIO0ae5lo4N8&libraries=places&callback=initAutocomplete">
   </script>
-  <script src="finder.js"></script>
+  <script>
+    
+(function ($, window, document) {
+  
+  var address = {
+      init : function(){
+        var self = this;
+
+        var $autocomplete = $('#autocomplete');
+        self.component_form = {
+            street_number: 'short_name',
+            route: 'long_name',
+            locality: 'long_name',
+            administrative_area_level_1: 'short_name',
+            country: 'long_name',
+            postal_code: 'short_name'
+          };
+
+        //
+        self.autocomplete = new google.maps.places.Autocomplete(($autocomplete[0]),{ types: ['geocode', 'establishment'] });
+
+        self.events();
+
+       
+
+      },
+    
+      events : function(){
+        var self = this;
+        
+        $('#form-submit').on('click', function(e){
+          var l = Ladda.create(this);
+  	 	l.start();
+        });
+        
+       
+        self.l = Ladda.create($('.button-search')[0]);
+
+        $('input#autocomplete').on('keyup', function() {
+      	 	self.l.start();       
+        });
+        google.maps.event.addListener(self.autocomplete, 'place_changed', function() { 
+            var place = self.autocomplete.getPlace();
+            
+            	
+            
+            // kill all input values
+            $('.text-inputs .form-control').val('');
+            
+            
+            for (var i = 0; i < place.address_components.length; i++) {
+                var address_type = place.address_components[i].types[0];
+                if (self.component_form[address_type]) {
+                  var val = place.address_components[i][self.component_form[address_type]];
+                  
+                  $('.text-inputs .' + address_type).val(val);
+                  
+                }
+              }
+          
+         console.log(place);
+            self.l.stop();
+          });
+      }
+   }
+
+  address.init();
+
+})(jQuery, window, document);
+
+  </script>
 </body>
 
 </html>
