@@ -1,0 +1,13 @@
+.text-inputs {
+    margin-top: 20px;
+}
+.text-inputs .form-group {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.text-inputs .form-group .control-label {
+    padding-bottom: 0;
+}
+.ladda-spinner div div div {
+    background-color: #bdc3c7 !important;
+}
