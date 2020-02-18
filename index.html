@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <div class="field">
+        <p class="control is-expanded has-icons-left">
+          <input id="autocomplete" class="input" placeholder="Enter your address"
+        onFocus="geolocate()" type="text" />
+          <span class="icon is-small is-left">
+            <i class="fa fa-search"></i>
+          </span>
+        </p>
+      </div>
+      
+      <div class="box">
+      
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Street Address</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="#" id="street_number">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Street" id="route">
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">City</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input" type="text" placeholder="City" id="locality">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">State</label>
+          </div>
+          <div class="field-body">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="State" id="administrative_area_level_1">
+              </p>
+            </div>
+            <div class="field">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="Zip Code" id="postal_code">
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Country</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input" type="text" placeholder="Country" id="country">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="finder.js"></script>
+</body>
+</html>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfbd6j5GD6sePUs-V954bpIO0ae5lo4N8&libraries=places&callback=initAutocomplete"></script>
